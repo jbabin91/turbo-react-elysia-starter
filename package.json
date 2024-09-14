@@ -9,15 +9,30 @@
     "format-and-link:fix": "biome check --write .",
     "format-and-lint": "biome check .",
     "format:check": "prettier -uc --cache .",
+    "postinstall": "pnpm lint:ws",
     "lint": "turbo format-and-lint",
     "lint:fix": "turbo format-and-lint:fix",
+    "lint:ws": "sherif",
+    "prepare": "husky",
+    "preview": "turbo preview",
     "typecheck": "turbo typecheck"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@types/node": "^22.5.5",
+    "commitlint": "^19.5.0",
+    "cz-git": "^1.9.4",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "prettier-plugin-packagejson": "^2.5.2",
+    "sherif": "^1.0.0",
     "turbo": "^2.1.2",
     "typescript": "^5.6.2"
   },
