@@ -9,8 +9,9 @@
     "format-and-link:fix": "biome check --write .",
     "format-and-lint": "biome check .",
     "format:check": "prettier -uc --cache .",
-    "lint": "turbo run format-and-lint",
-    "lint:fix": "turbo run format-and-lint:fix"
+    "lint": "turbo format-and-lint",
+    "lint:fix": "turbo format-and-lint:fix",
+    "typecheck": "turbo typecheck"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.0",

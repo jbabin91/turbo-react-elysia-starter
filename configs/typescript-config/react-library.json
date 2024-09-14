@@ -1,8 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "React Library",
-  "extends": "./base.json",
+  "extends": "./dom.json",
   "compilerOptions": {
-    "jsx": "react-jsx"
+    "tsBuildInfoFile": "${configDir}/node_modules/.cache/typescript/tsconfig.build.tsbuildinfo",
+    "outDir": "${configDir}/dist",
+    "rootDir": "${configDir}/src",
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "module": "Preserve",
+    "moduleResolution": "Bundler"
   }
 }
